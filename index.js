@@ -1,5 +1,6 @@
 import { SortEnum } from "./src/types.js";
 import { validateParams, fetchReviews, paginateReviews } from "./src/utils.js";
+import { listugcposts } from "./src/listugcposts.js";
 import parseReviews from "./src/parser.js";
 
 /**
@@ -31,3 +32,8 @@ export async function scraper(url, { sort_type = "relevent", search_query = "", 
         return;
     }
 }
+
+export function getUrl(url, { sort_type = "relevent", search_query = "", pages = "max", clean = false } = {}) {
+    return listugcposts(url, sort_type, search_query, pages, clean);
+}
+
