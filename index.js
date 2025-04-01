@@ -33,7 +33,7 @@ export async function scraper(url, { sort_type = "relevent", search_query = "", 
     }
 }
 
-export function getUrl(url, { sort_type = "relevent", search_query = "", pages = "max", clean = false } = {}) {
-    return listugcposts(url, sort_type, search_query, pages, clean);
+export function getUrl(url) {
+	return listugcposts(url, 2);
 }
 
