@@ -1,6 +1,6 @@
 import { SortEnum } from "./src/types.js";
 import { validateParams, fetchReviews, paginateReviews } from "./src/utils.js";
-import { listugcposts } from "./src/listugcposts.js";
+import listugcposts from "./src/listugcposts.js";
 import parseReviews from "./src/parser.js";
 
 /**
