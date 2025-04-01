@@ -65,8 +65,7 @@ export async function paginateReviews(url, sort, pages, search_query, clean, ini
     let reviews = initialData[2];
     let nextPage = initialData[1]?.replace(/"/g, "");
     let currentPage = 2;
-    while (nextPage && (pages === "max" || currentPage <= +pages)) {
-        console.log(`Scraping page ${currentPage}...`);
+    while (nextPage && (pages === "max" || currentPage <= +pages)) { 
         const data = await fetchReviews(url, sort, nextPage, search_query);
         reviews = [...reviews, ...data[2]];
         nextPage = data[1]?.replace(/"/g, "");
